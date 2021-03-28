@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.8",
+  "id": "fd7bca9c-6d43-4151-b9ea-23fb506bfeb5",
+  "version": "1.0.0",
+  "packageName": "com.otc.bot",
+  "developer": {
+    "name": "onetimecode",
+    "websiteUrl": "https://www.onetimecode.io",
+    "privacyUrl": "https://www.onetimecode.io",
+    "termsOfUseUrl": "https://www.onetimecode.io"
+  },
+  "name": {
+    "short": "OTC-Bot",
+    "full": "OTC-Bot"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [
+    {
+      "botId": "06984d9b-e830-4e16-a2f8-7fe24e83ddef",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ],
+      "commandLists": [
+        {
+          "scopes": [
+              "personal"
+          ],
+          "commands": [
+              {
+                  "title": "SENDCODETO",
+                  "description": "it will authorize your users through the code"
+              }
+          ]
+      },
+      {
+        "scopes": [
+            "team"
+        ],
+        "commands": [
+            {
+                "title": "SENDCODETO",
+                "description": "it will authorize your users through the code"
+            }
+        ]
+    }
+      ],
+      "supportsFiles": true
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "{{HOSTNAME}}"
+  ],
+  "showLoadingIndicator": false,
+  "isFullScreen": false,
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us"
+  }
+}

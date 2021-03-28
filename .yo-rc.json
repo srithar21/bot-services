@@ -1,0 +1,11 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "onetimecode",
+      "unitTestsEnabled": false,
+      "useAzureAppInsights": true
+    },
+    "libraryName": "otcBot",
+    "generator-version": "3.0.3"
+  }
+}
