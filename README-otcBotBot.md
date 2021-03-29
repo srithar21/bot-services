@@ -16,5 +16,14 @@ In order to create a bot you need to first register it in the [Azure portal](htt
 10. In the Bot app portal, generate a new app password and store it securely - you will need them for your `.env` file or add them as application settings for the hosting web site (see below)
 
 ## How to configure the bot
+1. brew update && brew install azure-cli
+
 
 The App Id and App Secret, generated during the registration, for the bot are read from the `MICROSOFT_APP_ID` and `MICROSOFT_APP_PASSWORD` environment variables, specified in the `.env` file. These can be configured in the Azure Web App under *Application Settings > App Settings*.
+
+
+1. .env - comment prod config and uncomment the qa config
+2. Copy the /config/manifest-qa.json content and paste to /src/manifest/manifest.json
+3. In terminal: `zip -r com.otc.bot.zip .` for local build `gulp ngrok-serve`
+4. Next `az webapp config appsettings set --resource-group  OTC-PROJECT-BOT-SERVICES  --name otc-bot-service --settings WEBSITE_RUN_FROM_PACKAGE="1"`
+5. Next `az webapp deployment source config-zip --resource-group  OTC-PROJECT-BOT-SERVICES  --name otc-bot-service --src com.otc.bot.zip`
